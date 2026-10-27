@@ -2,7 +2,7 @@ import { BasePage } from "@zeppos/zml/zml-page";
 import { createWidget, widget, prop, setStatusBarVisible } from "@zos/ui";
 import { px } from "@zos/utils";
 import { createSysTimer, stopTimer } from "@zos/timer";
-import * as layout from "zosLoader:./index.[pf].layout.js";
+import * as layout from "./index.s.layout.js";
 
 const MAX_MESSAGES = 6;
 
