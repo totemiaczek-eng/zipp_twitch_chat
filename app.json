@@ -1,0 +1,43 @@
+{
+  "configVersion": "v3",
+  "app": {
+    "appId": 1000000,
+    "appName": "Wrist Chat",
+    "appType": "app",
+    "version": {
+      "code": 1,
+      "name": "1.0.0"
+    },
+    "icon": "icon.png",
+    "vender": "Personal",
+    "description": "Read-only Twitch chat on Amazfit Active 2 Square"
+  },
+  "runtime": {
+    "apiVersion": {
+      "compatible": "4.2.0",
+      "target": "4.2.0",
+      "minVersion": "4.2.0"
+    }
+  },
+  "permissions": [],
+  "targets": {
+    "active2-square": {
+      "module": {
+        "page": {
+          "pages": ["page/index"]
+        },
+        "app-side": {
+          "path": "app-side/index"
+        }
+      },
+      "platforms": [
+        {
+          "name": "amazfit-active-2-square",
+          "deviceSource": 10223873
+        }
+      ],
+      "designWidth": 390
+    }
+  },
+  "defaultLanguage": "en-US"
+}

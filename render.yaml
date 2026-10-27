@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: wrist-chat-miwca-relay
+    runtime: node
+    plan: free
+    buildCommand: npm install --omit=dev
+    startCommand: npm run relay
+    healthCheckPath: /health
+    envVars:
+      - key: TWITCH_CHANNEL
+        value: miwca
