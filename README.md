@@ -28,7 +28,7 @@ The root `render.yaml` configures a free Render web service for the `miwca` rela
 1. Push this project, including `render.yaml`, to a GitHub repository.
 2. Create a Render account, choose **New** > **Blueprint**, and connect that repository.
 3. Deploy the `wrist-chat-miwca-relay` service. Copy its `https://...onrender.com` URL and confirm that `<URL>/health` returns `ok: true`.
-4. Set `RELAY_URL` in `app-side/settings.js` to that exact HTTPS origin, without a trailing slash, then rebuild and preview the watch app.
+4. The app is configured to use `https://wrist-chat-miwca-relay.onrender.com`. If you deploy a different service, update `RELAY_URL` in `app-side/settings.js` to its HTTPS origin, without a trailing slash, then rebuild and preview the watch app.
 
 Render's free web services sleep after 15 minutes without inbound traffic and may restart. When the watch next requests chat, the first request can take about a minute to wake the relay; the in-memory chat buffer is cleared whenever the service restarts.
 
